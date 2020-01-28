@@ -13,7 +13,7 @@ install:
 ## We do this to force Arduino to use the current one instead of the bundled version.
   - rm -f ../hardware/keyboardio/avr/libraries/Kaleidoscope/library.properties
 script:
-  - make travis-test KALEIDOSCOPE_TEMP_PATH=$(pwd)/.kaleidoscope-build-cache BOARD_HARDWARE_PATH=$(pwd)/../hardware
+  - make travis-test KALEIDOSCOPE_TEMP_PATH=$(pwd)/.kaleidoscope-build-cache BOARD_HARDWARE_PATH=$(pwd)/../hardware VERBOSE=1
 notifications:
   email:
     on_success: change
