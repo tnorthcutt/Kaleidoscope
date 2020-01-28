@@ -13,7 +13,6 @@ install:
 ## We delete the library.properties of the Bundle's Kaleidoscope.
 ## We do this to force Arduino to use the current one instead of the bundled version.
   - rm -rf ../hardware/keyboardio/avr/libraries/Kaleidoscope
-  - rm -rf ../hardware/keyboardio/avr/libraries/Kaleidoscope-HIDAdaptor-KeyboardioHID
   - ln -s $(pwd) ../hardware/keyboardio/avr/libraries/Kaleidoscope
 script:
   - make travis-test KALEIDOSCOPE_TEMP_PATH=$(pwd)/.kaleidoscope-build-cache BOARD_HARDWARE_PATH=$(pwd)/../hardware VERBOSE=1
